@@ -11,13 +11,13 @@ namespace FunctionalHelpers
         public static Func<T1, Func<T2, T3>> Curry<T1, T2, T3>(this Func<T1, T2, T3> func) =>
             p1 => p2 => func(p1, p2);
 
-        public static Func<T1, Func<T2, Func<T3, T4>>> Curry<T1, T2, T3, T4>(Func<T1, T2, T3, T4> func) =>
+        public static Func<T1, Func<T2, Func<T3, T4>>> Curry<T1, T2, T3, T4>(this Func<T1, T2, T3, T4> func) =>
             p1 => p2 => p3 => func(p1, p2, p3);
 
-        public static Func<T1, Func<T2, Func<T3, Func<T4, T5>>>> Curry<T1, T2, T3, T4, T5>(Func<T1, T2, T3, T4, T5> func) =>
+        public static Func<T1, Func<T2, Func<T3, Func<T4, T5>>>> Curry<T1, T2, T3, T4, T5>(this Func<T1, T2, T3, T4, T5> func) =>
             p1 => p2 => p3 => p4 => func(p1, p2, p3, p4);
 
-        public static Func<T1, Func<T2, Func<T3, Func<T4, Func<T5, T6>>>>> Curry<T1, T2, T3, T4, T5, T6>(Func<T1, T2, T3, T4, T5, T6> func) =>
+        public static Func<T1, Func<T2, Func<T3, Func<T4, Func<T5, T6>>>>> Curry<T1, T2, T3, T4, T5, T6>(this Func<T1, T2, T3, T4, T5, T6> func) =>
             p1 => p2 => p3 => p4 => p5 => func(p1, p2, p3, p4, p5);
 
 
